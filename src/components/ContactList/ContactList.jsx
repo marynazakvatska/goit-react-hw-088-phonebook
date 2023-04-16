@@ -3,7 +3,14 @@ import css from './ContactList.module.css'
 import { useDispatch, useSelector } from "react-redux";
 import { deleteContact } from 'redux/operations';
 import { getVisibleContacts } from 'redux/selectors';
-
+import {
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+} from '@chakra-ui/react'
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 
 const ContactList = () => {
@@ -14,19 +21,19 @@ const ContactList = () => {
   
  
  
-    return (<ul className={css.list_contacts}>
-  
+    return (<List spacing={3} /* className={css.list_contacts} */>
+    
         {contacts.map(({ id, name, number }) => {
           return  (
-                <li className={css.element} key={id}>
+                <ListItem className={css.element} key={id}>
                     <p >{name} :</p> <p className={css.number}>{number}</p>
-                  <button className={css.btn}  onClick={() =>dispatch(deleteContact(id))} >Delete</button>
+                  <Button colorScheme='teal'  className={css.btn}  onClick={() =>dispatch(deleteContact(id))} >Delete</Button >
                     
-              </li>
+              </ListItem>
           )
         }
         )}
-      </ul>)
+      </List>)
 }
     
 export default ContactList

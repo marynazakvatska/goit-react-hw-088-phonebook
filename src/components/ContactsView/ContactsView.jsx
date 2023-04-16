@@ -5,6 +5,7 @@ import { getError, getIsLoading, getContacts } from "redux/selectors";
 import ContactList from "components/ContactList/ContactList";
 import Form from "components/Form";
 import Filter from "components/Filter";
+import css from './Contacts.module.css';
 
 
 
@@ -33,12 +34,12 @@ export default function ContactsView() {
         fontSize: 40,
         color: '#010101',
         marginLeft: 30,
-        backgroundColor: 'powderblue',
+        backgroundColor: ' E0FFFF',
            
       }}
   >
      
-<h1>Phonebook</h1>
+<h1 className={css.title}>Phonebook</h1>
 
  {isLoading && <p>Loading contacts...</p>}
       
@@ -46,13 +47,13 @@ export default function ContactsView() {
           <Form />
 
           <h2>Contacts</h2>
-      {contacts.length > 0 &&
+      {contacts.length > 0 /* && */ ?
         (<>
         < Filter />
         <ContactList />
-        </>)
+        </>) : <p>There is no contacts at this moment</p>
        
-      }
+      } 
         </div>
        );
   

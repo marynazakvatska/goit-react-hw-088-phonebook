@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { changeFilter } from 'redux/filterSlice';
 import { getFilter } from 'redux/selectors';
+import { Input } from '@chakra-ui/react'
 
 
 const Filter = () => {
@@ -12,7 +13,7 @@ const Filter = () => {
     const value = useSelector(getFilter);
 
     return ( <label >Find contacts by name 
-               <input className={css.label_filter}
+               <Input className={css.label_filter}
                  value={value}
         onChange={(e) => dispatch(changeFilter(e.target.value))}
            type="text"

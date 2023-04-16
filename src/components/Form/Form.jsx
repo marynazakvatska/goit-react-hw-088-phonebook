@@ -3,6 +3,8 @@ import {useState} from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { register} from 'redux/operations';
 import { getContacts } from 'redux/selectors';
+import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Input } from '@chakra-ui/react'
 
 
 
@@ -53,8 +55,9 @@ export default function Form() {
    
         return (
           <form className={css.form} onSubmit={handleSubmit}>  
-             <label className={css.label}>Name 
-               <input className={css.input}
+            <label className={css.label}>
+              Name 
+               <Input /* className={css.input} */
                  value={name}
                 onChange={handleNameChange}
            type="text"
@@ -72,7 +75,7 @@ export default function Form() {
             
              
  <label className={css.label}> Number 
-               <input className={css.input}
+               <Input /* className={css.input} */
                    value={number}
                 onChange={handleNameChange}
   type="tel"
@@ -87,7 +90,7 @@ export default function Form() {
            height: 40}}
 />
  </label>
-  <button className={css.btn} type="submit">Add contact</button>
+  <Button colorScheme='teal'  type="submit">Add contact</Button>
            </form>  
            
         )
