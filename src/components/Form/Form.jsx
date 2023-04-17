@@ -57,7 +57,7 @@ export default function Form() {
           <form className={css.form} onSubmit={handleSubmit}>  
             <label className={css.label}>
               Name 
-               <Input /* className={css.input} */
+    <Input /* className={css.input} */
                  value={name}
                 onChange={handleNameChange}
            type="text"
@@ -75,7 +75,7 @@ export default function Form() {
             
              
  <label className={css.label}> Number 
-               <Input /* className={css.input} */
+               <Input 
                    value={number}
                 onChange={handleNameChange}
   type="tel"

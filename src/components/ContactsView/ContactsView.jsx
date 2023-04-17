@@ -47,7 +47,7 @@ export default function ContactsView() {
           <Form />
 
           <h2>Contacts</h2>
-      {contacts.length > 0 /* && */ ?
+      {contacts.length > 0 ?
         (<>
         < Filter />
         <ContactList />
