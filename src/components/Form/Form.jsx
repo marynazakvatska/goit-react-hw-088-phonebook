@@ -3,7 +3,7 @@ import {useState} from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { register} from 'redux/operations';
 import { getContacts } from 'redux/selectors';
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
 
 
