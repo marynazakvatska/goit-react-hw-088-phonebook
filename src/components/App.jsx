@@ -25,7 +25,8 @@ export const App = () => {
   
     <b>Refreshing user...</b>
   ) : (
-    <ChakraProvider>
+      <ChakraProvider>
+        
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />

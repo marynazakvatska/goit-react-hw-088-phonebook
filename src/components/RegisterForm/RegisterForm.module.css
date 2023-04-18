@@ -7,3 +7,14 @@
     flex-direction: column;
     margin-bottom: 16px;
 }
+
+.form {
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    background-color: rgb(130, 185, 107);
+    padding: 30px;
+    border-radius: 10px;
+
+
+}
